@@ -3,8 +3,7 @@ Concert Tracker
 
 by <a href="http://moodyco.de" target="_blank">Duane M. Moody</a>.
 
-Concert Tracker will solve your problem of where to start with documentation,
-by providing a basic explanation of how to do it easily.
+Concert Tracker will tracker concert venues and bands by showing where bands have played and which band played at a particular venue.
 
 Installation
 ------------
