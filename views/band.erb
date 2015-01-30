@@ -1,6 +1,6 @@
 <h3><%= @band.name %></h3>
 
-<p>Here is where your band is playing:</p>
+<p>Here is where your band has played:</p>
 
 
 <% if @band.venues().any?() %>
@@ -10,11 +10,11 @@
     <% end %>
   </ul>
 <% else %>
-  <p>Your band has not played anywhere recently.</p>
+  <p>Your band has not played anywhere.</p>
 <% end %>
 
 <form class="form-group" action="/bands/<%= @band.id() %>" method="post">
-  <label for="name">Add a new category</label>
+  <label for="name">Add a new venue</label>
   <input id="band_id" name="band_id" type="hidden" value="<%= @band.id() %>">
 
   <select name='venue'>
