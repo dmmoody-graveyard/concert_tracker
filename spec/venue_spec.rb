@@ -10,12 +10,12 @@ describe(Venue) do
   end
 
   it('takes a name and makes it titlecase') do
-    venue = Venue.create({:name => 'dolly parton', :id => nil})
+    venue = Venue.create({:name => 'dolly parton'})
     expect(venue.name()).to(eq('Dolly Parton'))
   end
 
   it('takes a name and if upcase returns name') do
-    venue = Venue.create({:name => 'ACDC', :id => nil})
+    venue = Venue.create({:name => 'ACDC'})
     expect(venue.name()).to(eq('ACDC'))
   end
 

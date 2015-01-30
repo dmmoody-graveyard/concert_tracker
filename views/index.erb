@@ -20,7 +20,7 @@
 
 <ul class="list-group">
   <% @bands.all().each() do |band| %>
-    <li class="list-group-item"><%= band.name %></li>
+    <li class="list-group-item"><a href="/bands/<%= band.id %>"><%= band.name %></a></li>
   <% end %>
 </ul>
 

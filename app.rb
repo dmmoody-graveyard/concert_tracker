@@ -9,6 +9,12 @@ get('/') do
   erb(:index)
 end
 
+get('/bands/:id') do
+  @band = Band.find(params.fetch("id").to_i())
+  @venues = Venue.all()
+  erb(:band)
+end
+
 post('/bands') do
   name = params.fetch('name')
   @band = Band.create({:name => name})
