@@ -1,8 +1,8 @@
 <p>Here are all the concert venues</p>
 
-<ul>
+<ul class="list-group">
   <% @venues.all().each() do |venue| %>
-    <li><%= venue.name %></li>
+    <li class="list-group-item"><%= venue.name %></li>
   <% end %>
 </ul>
 
@@ -18,9 +18,9 @@
 
 <p>Bands that you may want to see in concert</p>
 
-<ul>
+<ul class="list-group">
   <% @bands.all().each() do |band| %>
-    <li><%= band.name %></li>
+    <li class="list-group-item"><%= band.name %></li>
   <% end %>
 </ul>
 
