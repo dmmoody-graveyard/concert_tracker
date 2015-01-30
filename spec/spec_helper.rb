@@ -10,5 +10,9 @@ RSpec.configure do |config|
     Band.all().each() do |band|
       band.destroy()
     end
+
+    Venue.all().each() do |venue|
+      venue.destroy()
+    end
   end
 end
