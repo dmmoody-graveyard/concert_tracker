@@ -2,7 +2,7 @@
 
 <ul class="list-group">
   <% @venues.all().each() do |venue| %>
-    <li class="list-group-item"><%= venue.name %></li>
+    <li class="list-group-item"><a href="/venues/<%= venue.id %>"><%= venue.name %></a></li>
   <% end %>
 </ul>
 
