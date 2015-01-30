@@ -14,7 +14,7 @@ post('/bands') do
   @band = Band.create({:name => name})
   @bands = Band.all()
   @venues = Venue.all()
-  erb(:index)
+  redirect('/')
 end
 
 post('/venues') do
@@ -22,5 +22,5 @@ post('/venues') do
   @venue = Venue.create({:name => name})
   @venues = Venue.all()
   @bands = Band.all()
-  erb(:index)
+  redirect('/')
 end
