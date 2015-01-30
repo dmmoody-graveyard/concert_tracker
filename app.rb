@@ -41,9 +41,12 @@ delete("/bands/:id") do
   redirect("/")
 end
 
-get("/bands/:id/edit") do
+patch("/bands/:id") do
+  name = params.fetch("name")
   @band = Band.find(params.fetch("id").to_i())
-  erb(:list_edit)
+  @band.update({:name => name})
+  @venues = Venue.all()
+  erb(:band)
 end
 
 post('/venues') do
