@@ -1,0 +1,14 @@
+<h3><%= @band.name %></h3>
+
+<p>Here is where your band is playing:</p>
+
+
+<% if @band.venues().any?() %>
+  <ul class="list-group">
+    <% @band.venues().each() do |venue| %>
+      <li class="list-group-item"><%= venue.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Your band has not played anywhere recently.</p>
+<% end %>
