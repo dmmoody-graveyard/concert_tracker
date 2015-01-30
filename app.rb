@@ -11,16 +11,16 @@ end
 
 post('/bands') do
   name = params.fetch('name')
-  @band = Band.new({:name => name})
-  @band.save()
+  @band = Band.create({:name => name})
   @bands = Band.all()
+  @venues = Venue.all()
   erb(:index)
 end
 
 post('/venues') do
   name = params.fetch('name')
-  @venue = Venue.new({:name => name})
-  @venue.save()
+  @venue = Venue.create({:name => name})
   @venues = Venue.all()
+  @bands = Band.all()
   erb(:index)
 end
