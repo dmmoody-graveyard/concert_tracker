@@ -23,6 +23,7 @@ GEM
     minitest (5.5.1)
     multi_json (1.10.1)
     pg (0.18.1)
+    psych (2.0.11)
     rack (1.6.0)
     rack-protection (1.5.3)
       rack
@@ -66,7 +67,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  json
   pg
+  psych
   rake
   rspec
   shoulda-matchers
