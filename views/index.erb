@@ -1,6 +1,20 @@
 <p>Here are all the concert venues</p>
 
+<ul>
+  <% @venues.all().each() do |venue| %>
+    <li><%= venue.name %></li>
+  <% end %>
+</ul>
 
+<form action="/venues" method="post">
+  <div class="form-group">
+    <label for="name">Add a New Venue</label>
+    <input id="name" name="name" type="text" class="form-control" placeholder="Enter the name of a venue">
+  </div>
+  <button class="btn btn-default" type="submit">Add Venue</button>
+</form>
+
+<hr>
 
 <p>Bands that you may want to see in concert</p>
 
