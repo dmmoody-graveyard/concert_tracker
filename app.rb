@@ -64,7 +64,7 @@ get('/venues/:id') do
 end
 
 post('/venues/:id') do
-  band = params.fetch("band").to_i()
+  band = params.fetch("band")
   @band = Band.find(band)
   venue_id = params.fetch("id").to_i()
   @venue = Venue.find(venue_id)
