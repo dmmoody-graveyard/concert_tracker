@@ -6,7 +6,7 @@
 <% if @venue.bands().any?() %>
   <ul class="list-group">
     <% @venue.bands().each() do |band| %>
-      <li class="list-group-item"><%= band.name %></li>
+      <li class="list-group-item"><a href="/bands/<%= band.id %>"><%= band.name %></a></li>
     <% end %>
   </ul>
 <% else %>
@@ -28,4 +28,19 @@
 
 <hr>
 
-<a href='/' class='btn btn-default'>Back to Home Page</a>
+<form action="/venues/<%= @venue.id() %>" method="post">
+  <div class="form-group">
+    <input name="_method" type="hidden" value="patch">
+
+    <label for="name">Rename the venue:</label>
+    <input id="name" name="name" type="text">
+
+    <button type="submit" class="btn btn-default btn-warning">Update</button>
+  </div>
+</form>
+
+<form action="/venues/<%= @venue.id %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+
+  <button type="submit" class="btn btn-default btn-xs btn-danger">Delete Venue</button>
+</form>

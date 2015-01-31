@@ -72,3 +72,19 @@ post('/venues/:id') do
   @bands = Band.all()
   erb(:venue)
 end
+
+delete("/venues/:id") do
+  @venue = Venue.find(params.fetch("id").to_i())
+  @venue.delete()
+  @bands = Band.all()
+  @venues = Venue.all()
+  redirect("/")
+end
+
+patch("/venues/:id") do
+  name = params.fetch("name")
+  @venue = Venue.find(params.fetch("id").to_i())
+  @venue.update({:name => name})
+  @bands = Band.all()
+  erb(:venue)
+end
