@@ -1,4 +1,5 @@
 require('spec_helper')
+require('shoulda-matchers')
 
 describe(Band) do
 
